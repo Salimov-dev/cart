@@ -24,15 +24,15 @@ const CountersList = () => {
   };
 
   const handleIncrement = (value, id) => {
-    const newValue = counters.map((obj) =>
-      obj.id === id ? { ...obj, value: value + 1 } : obj
+    const newValue = counters.map((counter) =>
+      counter.id === id ? { ...counter, value: value + 1 } : counter
     );
     setCounters(newValue);
   };
 
   const handleDecrement = (value, id) => {
-    const newValue = counters.map((obj) =>
-      obj.id === id ? { ...obj, value: value - 1 } : obj
+    const newValue = counters.map((counter) =>
+      counter.id === id ? { ...counter, value: value - 1 } : counter
     );
     setCounters(newValue);
   };
