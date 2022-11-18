@@ -34,7 +34,9 @@ const CountersList = () => {
     const newValue = counters.map((counter) =>
       counter.id === id ? { ...counter, value: value - 1 } : counter
     );
-    setCounters(newValue);
+    value !== 0
+      ? setCounters(newValue)
+      : alert("Введите положительное количество");
   };
 
   return (
